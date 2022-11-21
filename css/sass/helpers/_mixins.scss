@@ -24,14 +24,12 @@
   align-items: center;
   justify-content: center;
 }
-
 // centring element by flex between
 @mixin flex-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 // Full Width And height
 @mixin Full-w-h {
     width: 100%;
@@ -50,14 +48,12 @@
   top: 0%;
   left: 0%;
 }
-
 // reset circle
 @mixin circle($width, $height) {
     width: $width;
     height: $height;
     border-radius: 50%;
 }
-
 //Edit Element On Different Screens
 //min media
 @mixin minWidth($size) {

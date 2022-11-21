@@ -1,0 +1,62 @@
+.login-section {
+  min-height: calc(100vh - 70px - 178px);
+  .box-login {
+    &.sing-up {
+      width: 100%;
+      margin: 0;
+      max-width: 100%;
+      padding: 0px;
+      border-radius: 8px;
+      .login-title {
+        font-size: 19px;
+      }
+      .card-body {
+        width: 390px;
+        margin: auto;
+      }
+    }
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 388px;
+    margin: 0 auto;
+    .login-title {
+      color: $main-color;
+      font-size: 24px;
+      font-weight: normal;
+    }
+    .inp-holder {
+      .login-inp {
+        border: 1px solid #d2d2d2;
+        border-radius: 5px;
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+        height: 40px;
+        background-color: #f8f8f8;
+        font-size: 12px;
+        direction: rtl;
+      }
+    }
+    .form-check {
+      .login-label {
+        color: $trouble-7;
+        font-size: 13.5px;
+      }
+    }
+    .btn-holder {
+      .sing-in {
+        background-color: $main-color;
+        text-align: center;
+        padding: 10px;
+        border: 0;
+        color: $white-color;
+        border-radius: 100px;
+        width: 158px;
+        transition: $main-transition;
+        &:hover {
+          background-color: $mainDark-color;
+        }
+      }
+    }
+  }
+}

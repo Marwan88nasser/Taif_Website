@@ -1,3 +1,72 @@
 .landing-page {
   height: calc(100vh - 70px);
+  &.sm {
+    height: calc(100vh - 330px);
+  }
+}
+
+.banner {
+  position: relative;
+  background-image: url("../images/taa.png");
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #583663ad;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+}
+
+.application-section {
+  .phone {
+    width: 100%;
+    height: 100%;
+  }
+  .add {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .install-app {
+    flex-direction: column;
+    @include Full-w-h;
+    @include flex-center;
+    .install {
+      color: $blue-color;
+      font-size: 20px;
+    }
+    .shop {
+      color: $xt-gray-text;
+      font-size: 12px;
+    }
+    .play,
+    .app {
+      width: 140px;
+    }
+  }
+}
+
+.showPlace-section {
+  .section-space {
+    border: 1px solid #dee2e6;
+    .camp {
+      min-height: 47px;
+      line-height: 47px;
+      padding: 11px 20px;
+      border-radius: 23px;
+      background-color: #5cd5de14;
+    }
+  }
+  #map {
+    width: 100%;
+    height: 280px;
+    border: 0;
+  }
 }
