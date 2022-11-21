@@ -1,0 +1,53 @@
+.main-header {
+  background-color: $main-color;
+  .nav-content {
+    @include Full-w-h;
+    @include flex-between;
+    .logo-holder {
+      a {
+        @include flex-center;
+        gap: 9px;
+        .main-logo {
+          width: 60px;
+        }
+        .site-name {
+          color: $white-color;
+          font-size: 19px;
+          margin-top: 7px;
+        }
+      }
+    }
+    .sing-holder {
+      @include flex-center;
+      flex-wrap: wrap;
+      .list-items {
+        &.bor {
+          border-right: 1px solid $white-color;
+        }
+        .link-item {
+          position: relative;
+          color: $white-color;
+          padding: 12px 14px;
+          font-size: 15px;
+          font-weight: 600;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0%;
+            right: 50%;
+            height: 2px;
+            width: 0%;
+            background-color: $yellow-color;
+            transform: translateX(-50%);
+            transition: $main-transition;
+          }
+          &:hover::before {
+            width: 100%;
+            transform: translateX(50%);
+          }
+        }
+      }
+
+    }
+  }
+}
