@@ -46,7 +46,7 @@
 .place-box {
   border-radius: 12px;
   @include flex-between;
-  align-items: flex-start !important;
+  align-items: flex-start;
   background-color: #5cd5de14;
   border-color: #4dc7d014;
   .info {

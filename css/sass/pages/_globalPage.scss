@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "J-FFlat";
+  src: url("../fonts/alfont_com_bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "J-FFlat";
+  src: url("../fonts/ArbFONTS-JFFlat-Regular.otf");
+  font-weight: normal;
+}
+
 * {
   @include reset-all;
 }
@@ -7,7 +18,7 @@ html {
 }
 
 body {
-  font-family: "Noto Kufi Arabic", sans-serif;
+  font-family: "J-FFlat";
   font-size: 14px;
   color: $pageDark-color;
 }

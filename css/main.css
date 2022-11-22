@@ -72,7 +72,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  align-items: flex-start !important;
+  align-items: flex-start;
   background-color: rgba(92, 213, 222, 0.0784313725);
   border-color: rgba(77, 199, 208, 0.0784313725);
 }
@@ -120,6 +120,16 @@
   margin-right: 5px;
 }
 
+@font-face {
+  font-family: "J-FFlat";
+  src: url("../fonts/alfont_com_bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "J-FFlat";
+  src: url("../fonts/ArbFONTS-JFFlat-Regular.otf");
+  font-weight: normal;
+}
 * {
   box-sizing: border-box;
   padding: 0%;
@@ -131,7 +141,7 @@ html {
 }
 
 body {
-  font-family: "Noto Kufi Arabic", sans-serif;
+  font-family: "J-FFlat";
   font-size: 14px;
   color: #212529;
 }
@@ -434,16 +444,51 @@ select:focus {
 .showPlace-section .section-space {
   border: 1px solid #dee2e6;
 }
-.showPlace-section .section-space .camp {
-  min-height: 47px;
-  line-height: 47px;
-  padding: 11px 20px;
-  border-radius: 23px;
-  background-color: rgba(92, 213, 222, 0.0784313725);
+.showPlace-section .section-space .des-text {
+  min-height: 500px;
 }
-.showPlace-section #map {
+.showPlace-section .section-space .des-text p {
+  line-height: 25px;
+  color: #777;
+}
+.showPlace-section .section-space .options-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.showPlace-section .section-space .options-btn .action-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #f2f4fa;
+  color: #8f95a3;
+  border-radius: 0px;
+  transition: none;
+  gap: 7px;
+  font-size: 19px;
+}
+.showPlace-section .section-space .options-btn .action-btn:hover {
+  background-color: #ddd;
+}
+.showPlace-section .section-space .options-btn .action-btn i,
+.showPlace-section .section-space .options-btn .action-btn svg {
+  font-size: 19px;
+}
+.showPlace-section .section-space .options-btn .action-btn i.colored,
+.showPlace-section .section-space .options-btn .action-btn svg.colored {
+  color: rgba(6, 160, 203, 0.7529411765);
+}
+.showPlace-section .section-space #map {
   width: 100%;
-  height: 280px;
+  height: 300px;
   border: 0;
 }
 
