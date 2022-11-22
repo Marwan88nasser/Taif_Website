@@ -1,240 +1,461 @@
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>الرئيسية</title>
-    <!-- Bootstrap Framework Css File -->
-    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
-    <!--  Normalize Css File -->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <!-- Main  Css File -->
-    <link rel="stylesheet" href="css/main.css" />
-    <!-- Font Awesome Library File -->
-    <link rel="stylesheet" href="css/all.min.css" />
-    <!-- Css Swiper Library File -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <!-- Aos Library Css File -->
-    <link rel="stylesheet" href="css/aos.css" />
-  </head>
-  <body>
-    <!-- start scroll to top button -->
-    <div class="up-btn" id="up-btn">
-      <i class="fa-solid fa-angles-up"></i>
-    </div>
-    <!-- end scroll to top button -->
-    <!-- Start Header -->
-    <nav class="navbar main-header">
-      <div class="container">
-        <div class="nav-content">
-          <h1 class="logo-holder m-0">
-            <a href="index.html">
-              <img class="main-logo" src="images/logo.png" alt="logo" />
-              <span class="site-name">تطبيق الطائف</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الرئيسية</title>
+  <!-- Bootstrap Framework Css File -->
+  <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+  <!--  Normalize Css File -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <!-- Main  Css File -->
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- Font Awesome Library File -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <!-- Css Swiper Library File -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- Aos Library Css File -->
+  <link rel="stylesheet" href="css/aos.css" />
+</head>
+
+<body>
+  <!-- start scroll to top button -->
+  <div class="up-btn" id="up-btn">
+    <i class="fa-solid fa-angles-up"></i>
+  </div>
+  <!-- end scroll to top button -->
+  <!-- Start Header -->
+  <nav class="navbar main-header">
+    <div class="container">
+      <div class="nav-content">
+        <h1 class="logo-holder m-0">
+          <a href="index.html">
+            <img class="main-logo" src="images/logo.png" alt="logo" />
+            <span class="site-name">تطبيق الطائف</span>
+          </a>
+        </h1>
+        <ul class="sing-holder">
+          <li class="list-items">
+            <a href="" class="link-item">En</a>
+          </li>
+          <li class="list-items bor">
+            <a href="login.html" class="link-item">
+              تسجيل الدخول
+              <i class="icon-item fa-solid fa-user-plus"></i>
             </a>
-          </h1>
-          <ul class="sing-holder">
-            <li class="list-items">
-              <a href="" class="link-item">En</a>
-            </li>
-            <li class="list-items bor">
-              <a href="login.html" class="link-item">
-                تسجيل الدخول
-                <i class="icon-item fa-solid fa-user-plus"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- End Header -->
-    <div class="add-ad-section height-section py-3" id="app">
-      <div class="container my-4 mx-auto py-5 ">
-        <h2 class="text-center mb-4">
-          أضف إعلانك
-        </h2>
-        <form method="POST">
-          <div class="s-stepper-content">
-            <!-- Step 1 -->
-              <div class="s-stepper-stage "  v-if="step == 1">
-                  <div >
-                      <h5 class="fw-bold"><i class="fas fa-angle-double-left"></i> اتفاقية العمولة</h5>
-                      <div class="py-2 my-4 border-top border-bottom">
-                          <p class="text-muted mb-2">بسم الله الرحمن الرحيم</p> 
-                          <p class="text-muted mb-0">قال الله تعالى " وَأَوْفُوا بِعَهْدِ اللَّهِ إِذَا
-                              عَاهَدتُّمْ
-                              وَلَا تَنقُضُوا الْأَيْمَانَ بَعْدَ تَوْكِيدِهَا وَقَدْ جَعَلْتُمُ اللَّهَ عَلَيْكُمْ
-                              كَفِيلًا ۚ إِنَّ اللَّهَ يَعْلَمُ مَا تَفْعَلُونَ " صدق الله العظيم </p>
-                      </div>
-
-                      <div class="d-flex gap-2">
-
-                          <input type="checkbox" v-model="agreed1" class="">
-                          <label for="">
-                                                                                        
-                      أتعهد واقسم بالله أنا المعلن أن أدفع عمولة الموقع وهي 0.5% من قيمة البيع سواء تم البيع عن طريق الموقع أو بسببه، كما أتعهد بدفع العمولة خلال 10 أيام من استلام كامل مبلغ المبايعة.
-                      بإنشائك للإعلان في منصتنا فأنت توافق على بنود
-                                                          </label>
-                      </div>
-                      <br>
-                      <div class="">
-                          <p class="text-danger fw -bold">
-                              هذه الخدمة خاصة بملاك العقار المملوكة بصكوك شرعية فقط
-                          </p>
-                      </div>
-                      <div class="">
-                          <p class="text-success fw -bold">
-                              ملاحظة: عمولة الموقع هى على المعلن ولاتبرأ ذمة المعلن من العمولة إلا فى حال دفعها
-                          </p>
-                      </div>
-
-                      <br>
-                      <div class="d-flex align-items-center justify-content-between">
-                          <button type="button" @click="step++" class="main-btn btn" :class="[!agreed1 ? 'btn-disabled' :'']" >
-                              إستمرار 
-                          </button>
-                                                  </div>
-                  </div>
-              </div>
-            <!-- Step 2 -->
-            <div id="stage2" class="s-stepper-stage active">
-              <h5 class="fw-bold"><i class="fas fa-angle-double-left"></i> اضافة صور</h5>
-              <div id="createApp">
-                  <div class="jb-form">
-                      <input name="image" type="hidden" value="TULL">
-                      <div class="form-group mb-2 mt-3">
-                          <input type="file" class="form-control" multiple="">
-                      </div>
-                  </div>
-                  <input type="checkbox" v-model="not_image">
-                  <label for="">لايوجد صور</label>
-                  <div class="d-flex align-items-center gap-1 justify-content-end ">
-                      <button type="button" class="main-btn btn"   @click="step--">
-                          السابق 
-                      </button>
-                      <button type="button" class="main-btn btn "  @click="step++" >
-                          التالى 
-                      </button>
-
-                  </div>
-              </div>
-
-          </div>
-          </div>
-      </form>
+          </li>
+        </ul>
       </div>
     </div>
-    <!-- Start Footer -->
-    <footer class="main-footer">
-      <div class="top-footer">
-        <div class="container">
-          <div class="row g-3">
-            <div
-              class="col-md-4 d-flex flex-column align-items-center align-items-md-start"
-            >
-              <h5 class="title">أقسام الموقع</h5>
-              <ul class="footer-list">
-                <li>
-                  <a href="">الرئيسية</a>
-                  <a href="">السياسات</a>
-                  <a href="">اتصل بنا</a>
-                </li>
-              </ul>
+  </nav>
+  <!-- End Header -->
+  <div class="add-ad-section height-section py-3" id="app">
+    <div class="container my-4 mx-auto py-5 ">
+      <h2 class="text-center mb-4">
+        أضف إعلانك
+      </h2>
+      <form method="POST">
+        <div class="s-stepper-content">
+          <!-- Step 1 -->
+          <div class="s-stepper-stage " v-show="step == 1">
+            <div>
+              <h5 class="fw-bold"><i class="fas fa-angle-double-left"></i> اتفاقية العمولة</h5>
+              <div class="py-2 my-4 border-top border-bottom">
+                <p class="text-muted mb-2">بسم الله الرحمن الرحيم</p>
+                <p class="text-muted mb-0">قال الله تعالى " وَأَوْفُوا بِعَهْدِ اللَّهِ إِذَا
+                  عَاهَدتُّمْ
+                  وَلَا تَنقُضُوا الْأَيْمَانَ بَعْدَ تَوْكِيدِهَا وَقَدْ جَعَلْتُمُ اللَّهَ عَلَيْكُمْ
+                  كَفِيلًا ۚ إِنَّ اللَّهَ يَعْلَمُ مَا تَفْعَلُونَ " صدق الله العظيم </p>
+              </div>
+
+              <div class="d-flex gap-2">
+
+                <input type="checkbox" v-model="agreed1" class="">
+                <label for="">
+
+                  أتعهد واقسم بالله أنا المعلن أن أدفع عمولة الموقع وهي 0.5% من قيمة البيع سواء تم البيع عن طريق الموقع
+                  أو بسببه، كما أتعهد بدفع العمولة خلال 10 أيام من استلام كامل مبلغ المبايعة.
+                  بإنشائك للإعلان في منصتنا فأنت توافق على بنود
+                </label>
+              </div>
+              <br>
+              <div class="">
+                <p class="text-danger fw -bold">
+                  هذه الخدمة خاصة بملاك العقار المملوكة بصكوك شرعية فقط
+                </p>
+              </div>
+              <div class="">
+                <p class="text-success fw -bold">
+                  ملاحظة: عمولة الموقع هى على المعلن ولاتبرأ ذمة المعلن من العمولة إلا فى حال دفعها
+                </p>
+              </div>
+
+              <br>
+              <div class="d-flex align-items-center justify-content-end">
+                <button type="button" @click="step++" class="main-btn btn" :class="[!agreed1 ? 'btn-disabled' :'']">
+                  إستمرار
+                </button>
+              </div>
             </div>
-            <div
-              class="col-md-4 d-flex align-items-center justify-content-center"
-            >
-              <ul class="social-links">
-                <li class="nav-item">
-                  <a class="nav-link" href="#"
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"
-                    ><i class="fab fa-whatsapp"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </li>
-              </ul>
+          </div>
+          <!-- Step 2 -->
+          <div class="s-stepper-stage " v-show="step == 2">
+            <h5 class="fw-bold"><i class="fas fa-angle-double-left"></i> اضافة صور</h5>
+            <div>
+              <div class="form-group mb-2 mt-3">
+                <input type="file" v-model="images" class="form-control" multiple="" v-show="notImage !== true">
+              </div>
+              <input type="checkbox" v-model="notImage">
+              <label for="">لايوجد صور</label>
+              <div class="d-flex align-items-center gap-1 justify-content-end ">
+                <button type="button" class="main-btn btn" @click="step--">
+                  السابق
+                </button>
+                <button type="button" class="main-btn btn " :class="[!notImage && !images ? 'btn-disabled' :'']"
+                  @click="step++">
+                  التالى
+                </button>
+
+              </div>
             </div>
-            <div
-              class="col-md-4 d-flex flex-column align-items-center align-items-md-end"
-            >
-              <ul class="plus-info align-items-center align-items-md-end">
-                <li>
-                  <a class="" href="">
-                    0123456789<i class="fas fa-mobile-alt"></i
-                  ></a>
-                </li>
-                <li>
-                  <a class="" href="">
-                    info@website.com <i class="fas fa-envelope"></i
-                  ></a>
-                </li>
-                <li>
-                  <a class="" href="">
-                    www.website.com <i class="fas fa-globe"></i
-                  ></a>
-                </li>
-              </ul>
+
+          </div>
+          <!-- Step 3 -->
+          <div class="s-stepper-stage " v-show="step == 3">
+            <div>
+              <h5 class="fw-bold"><i class="fas fa-angle-double-left"></i>تحديد الموقع</h5>
+              <div>
+                <div class="form-group mb-3">
+                  <label for="">حدد الموقع على الخريطة </label>
+                </div>
+              </div>
+              <div id="map"></div>
+              <button class="btn btn-primary btn-sm w-100 mt-3" type="button" onclick="setCurrentLocation()">تحديد موقعي
+                الحالي</button>
+              <select class="form-control my-3">
+                <option value="">* الحي</option>
+              </select>
+              <br>
+              <div class="d-flex align-items-center gap-1 justify-content-end">
+                <button type="button" @click="step--" class="main-btn btn">
+                  السابق
+                </button>
+                <button type="button" @click="step++" class="main-btn btn ">
+                  التالى
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Step 4 -->
+          <div class="s-stepper-stage " v-show="step == 4">
+            <h5 class="fw-bold"><i class="fas fa-angle-double-left"></i> طلب تسويق عقار </h5>
+            <div>
+              <div class="container my-4 mx-auto py-5">
+                <div class="">
+                  <div class="row w-100 mx-0 px-0">
+                    <div class="col-md-6">
+                      <div class="form-group mb-3"><label for="">عنوان الإعلان<span class="text-danger">*</span></label>
+                        <input maxlength="50" type="text" class="form-control w-100"></div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-group mb-3">
+                        <label for=""> القسم <span class="text-danger">*</span></label>
+                        <select class="form-control w-100" id="">
+                          <option value=""> اختر القسم</option>
+                          <option value="1">عروض عقارية
+                          </option>
+                          <option value="2">طلبات عقارية
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group mb-3">
+                        <label for="">الغرض<span class="text-danger">*</span></label>
+                        <select class="form-control" id="">
+                          <option value="">ختر الغرض </option>
+                          <option>
+                            بيع
+                          </option>
+                          <option>
+                            أيجار
+                          </option>
+                          <option>
+                            استثمار
+                          </option>
+                        </select>
+
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group mb-3">
+                        <label for="">نوع العقار<span class="text-danger">*</span></label>
+                        <select class="form-control" name="type" id="">
+                          <option value="">اختر النوع </option>
+                          <option>
+                            استئجار استراحة
+                          </option>
+                          <option>
+                            استئجار شقة تمليك
+                          </option>
+                          <option>
+                            استئجار دور تمليك
+                          </option>
+                          <option>
+                            استئجار مزرعة
+                          </option>
+                          <option>
+                            استئجار آخرى
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group mb-3"><label for="">مساحة العقار
+                          (م٢)<span class="text-danger">*</span></label> <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group mb-3"><label for="">عمر العقار ( سنة
+                          )<span class="text-danger">*</span></label> <input type="number" class="form-control"></div>
+                    </div>
+                    <div class=" col-md-6 "><label for="">عرض الشارع (م٢)<span class="text-danger">*</span></label>
+                      <input type="number" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group mb-3">
+                        <label for="">واجهة العقار <span class="text-danger">*</span></label>
+                        <select class="form-control kol-th">
+                          <option value="1">شرق
+                          </option>
+                          <option value="2">غرب
+                          </option>
+                          <option value="3">جنوب
+                          </option>
+                          <option value="4">شمال
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label class="my-2 control-label" for="">صفه العقار<span class="text-danger">*</span></label>
+                      <div class="">
+
+                        <select class="form-control">
+                          <option value="">صفه العقار</option>
+                          <option value="staying">سكني</option>
+                          <option value="trading">تجاري</option>
+                          <option value="all">الكل</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group mb-3">
+                        <label for="" class="my-2 control-label">هل العقار
+                          مرهون<span class="text-danger">*</span></label>
+                        <select class="form-control">
+                          <option value="0">لا</option>
+                          <option value="1">نعم </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group mb-3">
+                        <label for="">صفة المعلن<span class="text-danger">*</span></label>
+                        <select class="form-control">
+                          <option value="owner">مالك</option>
+                          <option value="delegate">مفوض</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group mb-3">
+                        <label for="">رقم الجوال او وسية الإتصال<span class="text-danger">*</span></label> <input
+                          type="number" class="form-control">
+                        <div>
+
+                          <input type="checkbox">
+                          <label>اخفاء رقم الجوال</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-group mb-3">
+                        <label for=""> ثمن السلعة او الخدمة ( ريال )
+                          <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="col-md-12">
+                      <div class="form-group mb-3"><label for=""> نص الإعلان
+                          <span class="text-danger">*</span></label>
+                        <textarea type="text" name=" description" rows="2" class="form-control"></textarea>
+                      </div>
+
+                      <div class="form-group mb-3">
+                        <input type="checkbox" class="me-1"><label for="agreed"><a href="#" class="text-dark">
+                            الإطلاع على سياسة الإستخدام</a> <span class="text-danger">*</span></label>
+                      </div>
+                      <div class="mt-2">
+                        <input type="checkbox">
+                        <label for="">تم الاطلاع على ضوابط الإعلانات العقارية
+                          الصادرة من الهيئة العامة
+                          للعقار .</label>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <div class="row w-100 mx-0 px-0">
+                    <div class="row w-100 mx-0 px-0"></div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="d-flex align-items-center gap-1 justify-content-end">
+                <button type="button" class="main-btn btn ">
+                  السابق
+                </button>
+
+                <button type="submit" class="main-btn btn">
+                  ارسال الطلب
+                </button>
+
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="bottom-footer">
-        <div class="container">
-          <div
-            class="content-bottom-footer justify-content-center justify-content-sm-between gap-2"
-          >
-            <div class="copy-rights">
-              <a
-                href="https://www.const-tech.com.sa/"
-                target="_black"
-                class="mb-0 tech text-center text-sm-start"
-                >© جميع الحقوق محفوظة لمؤسسة تطبيق الطائف 2021</a
-              >
-            </div>
-            <div class="footer-logo">
-              <a href="https://www.const-tech.com.sa/" target="_black"
-                ><img class="c-logo" src="images/copy.png" alt="logo-footer"
-              /></a>
-            </div>
+      </form>
+    </div>
+  </div>
+  <!-- Start Footer -->
+  <footer class="main-footer">
+    <div class="top-footer">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-md-4 d-flex flex-column align-items-center align-items-md-start">
+            <h5 class="title">أقسام الموقع</h5>
+            <ul class="footer-list">
+              <li>
+                <a href="">الرئيسية</a>
+                <a href="">السياسات</a>
+                <a href="">اتصل بنا</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 d-flex align-items-center justify-content-center">
+            <ul class="social-links">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fab fa-whatsapp"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 d-flex flex-column align-items-center align-items-md-end">
+            <ul class="plus-info align-items-center align-items-md-end">
+              <li>
+                <a class="" href="">
+                  0123456789<i class="fas fa-mobile-alt"></i></a>
+              </li>
+              <li>
+                <a class="" href="">
+                  info@website.com <i class="fas fa-envelope"></i></a>
+              </li>
+              <li>
+                <a class="" href="">
+                  www.website.com <i class="fas fa-globe"></i></a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- End Footer -->
-    <!-- Vue Js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script>
-        let app = new Vue({
-        el: "#app",
-        data: {
-            step:1,
-            agreed1:"",
-        },
-        methods: {},
+    </div>
+    <div class="bottom-footer">
+      <div class="container">
+        <div class="content-bottom-footer justify-content-center justify-content-sm-between gap-2">
+          <div class="copy-rights">
+            <a href="https://www.const-tech.com.sa/" target="_black" class="mb-0 tech text-center text-sm-start">© جميع
+              الحقوق محفوظة لمؤسسة تطبيق الطائف 2021</a>
+          </div>
+          <div class="footer-logo">
+            <a href="https://www.const-tech.com.sa/" target="_black"><img class="c-logo" src="images/copy.png"
+                alt="logo-footer" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+  <!-- Vue Js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script>
+    let app = new Vue({
+      el: "#app",
+      data: {
+        step: 1,
+        agreed1: "",
+        images: "",
+        notImage: "",
+      },
+      methods: {
+
+      },
     });
   </script>
-    <!-- Js Swiper  -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- Bootstrap Framework Js File -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- FontAwesome Library Js File -->
-    <script src="js/all.min.js"></script>
-    <!-- Aos Library Js File -->
-    <script src="js/aos.js"></script>
-    <!-- Main Js File -->
-    <script src="js/main.js"></script>
-  </body>
+  <!-- Map Google -->
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyJOpflSLp3hRIgdjtRB3R315q6jKzrCE"></script>
+  <script>
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: -34.397, lng: 150.644 },
+      zoom: 8,
+    });
+    function setCurrentLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+            map.setCenter(pos);
+            myMarker.setPosition(pos);
+            confirmed(pos.lat, pos.lng);
+          },
+          () => {
+            // handleLocationError(true, document.getElementById('current').innerHTML, map.getCenter());
+          }
+        );
+      } else {
+        // Browser doesn't support Geolocation
+        handleLocationError(false, document.getElementById('current').innerHTML, map.getCenter());
+      }
+
+    }
+  </script>
+  <!-- Js Swiper  -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- Bootstrap Framework Js File -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- FontAwesome Library Js File -->
+  <script src="js/all.min.js"></script>
+  <!-- Aos Library Js File -->
+  <script src="js/aos.js"></script>
+  <!-- Main Js File -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>
