@@ -100,3 +100,19 @@
     }
   }
 }
+
+// Start Section Add Ad
+.add-ad-section {
+  .container {
+    min-height:70vh;
+    max-width:700px;
+    .s-stepper-content .s-stepper-stage {
+      padding: 15px 22px;
+      box-shadow: 0 2px 4px 0px #aaa;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+  }
+  }
+}
+// End Section Add Ad

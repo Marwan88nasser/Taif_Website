@@ -6,3 +6,10 @@
   overflow-x: hidden;
   overflow-y: hidden;
 }
+.height-section {
+  min-height: calc(100vh - 69.22px - 120.96px - 57px);
+}
+.btn-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
