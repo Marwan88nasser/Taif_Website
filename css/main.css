@@ -187,6 +187,48 @@
   height: 280px;
 }
 
+.alert-btn {
+  max-width: 850px;
+  background-color: #d7f2dc;
+  padding: 1px 10px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+
+.use-navb .navbar-link {
+  color: #333;
+  display: block;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+.use-navb .navbar-link:hover {
+  background-color: #583663;
+  color: #FFF;
+}
+
+.avatar-wrapper {
+  position: relative;
+  height: 130px;
+  width: 130px;
+  margin: 50px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-box-shadow: 1px 1px 15px -5px black;
+          box-shadow: 1px 1px 15px -5px black;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.avatar-wrapper .profile-pic {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 @font-face {
   font-family: "J-FFlat";
   src: url("../fonts/alfont_com_bold.ttf");
@@ -210,7 +252,7 @@ html {
 
 body {
   font-family: "J-FFlat";
-  font-size: 14px;
+  font-size: 15px;
   color: #212529;
 }
 
