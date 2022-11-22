@@ -35,10 +35,20 @@
   opacity: 0.5;
 }
 
+.row-gap-24 {
+  row-gap: 24px;
+}
+
 .main-btn {
   border-color: #583663 !important;
   background-color: #583663 !important;
   color: #FFF !important;
+}
+
+.main-label {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 16px;
 }
 
 .box-img {

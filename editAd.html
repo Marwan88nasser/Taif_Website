@@ -55,8 +55,190 @@
       <h2 class="text-center mb-4">
         تعديل الإعلان
       </h2>
-      
-    </div>
+      <div class="row row-gap-24">
+        <div class="col-md-6 col-lg-3">
+          <div class="form-group mb-3"><label for="" class="main-label">عنوان الإعلان</label>
+            <input maxlength="50" type="text" class="form-control w-100"></div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="form-group mb-3">
+            <label for="" class="main-label"> القسم </label>
+            <select class="form-control w-100" id="">
+              <option value=""> اختر القسم</option>
+              <option value="1">عروض عقارية
+              </option>
+              <option value="2">طلبات عقارية
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="form-group mb-3">
+            <label for="" class="main-label">الغرض</label>
+            <select class="form-control" id="">
+              <option value="">ختر الغرض </option>
+              <option>
+                بيع
+              </option>
+              <option>
+                أيجار
+              </option>
+              <option>
+                استثمار
+              </option>
+            </select>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="form-group mb-3">
+            <label for="" class="main-label">نوع العقار</label>
+            <select class="form-control" name="type" id="">
+              <option value="">اختر النوع </option>
+              <option>
+                استئجار استراحة
+              </option>
+              <option>
+                استئجار شقة تمليك
+              </option>
+              <option>
+                استئجار دور تمليك
+              </option>
+              <option>
+                استئجار مزرعة
+              </option>
+              <option>
+                استئجار آخرى
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="form-group mb-3"><label for="" class="main-label">مساحة العقار
+              (م٢)</label> <input type="number" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="form-group mb-3"><label for="" class="main-label">عمر العقار ( سنة
+              )</label> <input type="number" class="form-control"></div>
+        </div>
+        <div class=" col-md-6 col-lg-3 "><label for="" class="main-label">عرض الشارع (م٢)</label>
+          <input type="number" class="form-control">
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="form-group mb-3">
+            <label for="" class="main-label">واجهة العقار </label>
+            <select class="form-control kol-th">
+              <option value="1">شرق
+              </option>
+              <option value="2">غرب
+              </option>
+              <option value="3">جنوب
+              </option>
+              <option value="4">شمال
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class=" col-md-6 col-lg-3">
+          <label class="my-2 control-label" for="">صفه العقار</label>
+          <div class="">
+
+            <select class="form-control">
+              <option value="">صفه العقار</option>
+              <option value="staying">سكني</option>
+              <option value="trading">تجاري</option>
+              <option value="all">الكل</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="form-group mb-3">
+            <label for="" class="main-label" class="my-2 control-label">هل العقار
+              مرهون</label>
+            <select class="form-control">
+              <option value="0">لا</option>
+              <option value="1">نعم </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="form-group mb-3">
+            <label for="" class="main-label">صفة المعلن</label>
+            <select class="form-control">
+              <option value="owner">مالك</option>
+              <option value="delegate">مفوض</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="form-group mb-3">
+            <label for="" class="main-label">رقم الجوال او وسية الإتصال</label> <input
+              type="number" class="form-control">
+            <div>
+
+              <input type="checkbox">
+              <label>اخفاء رقم الجوال</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="form-group mb-3">
+            <label for="" class="main-label"> ثمن السلعة او الخدمة ( ريال )
+              
+            </label>
+            <input type="number" class="form-control">
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <label for="" class="main-label" class="main-label">
+              صور الاعلان
+            </label>
+            <input type="file" v-model="images" class="form-control" multiple="" v-show="notImage !== true">
+          <input type="checkbox" v-model="notImage">
+          <label for="" class="">لايوجد صور</label>
+        </div>
+        <div class="col-12">
+            <label for=""  class="main-label">
+              الموقع
+            </label>
+            <div id="map"></div>
+              <button class="btn btn-primary btn-sm mx-auto mt-3" type="button" onclick="setCurrentLocation()">تحديد موقعي
+                الحالي</button>
+              <select class="form-control my-3">
+                <option value="">* الحي</option>
+              </select>
+        </div>
+        <div class="col-12">
+          <div class="form-group mb-3"><label for="" class="main-label"> نص الإعلان
+              </label>
+            <textarea type="text" name=" description" rows="2" class="form-control"></textarea>
+          </div>
+
+          <div class=" mb-3">
+            <input type="checkbox" class="me-1">
+            <label for="agreed"><a href="#" class="text-dark">
+                الإطلاع على سياسة الإستخدام</a> </label>
+          </div>
+          <div class="mt-2 ">
+            <input type="checkbox">
+            <label for="" class=""><a href="">تم الاطلاع على ضوابط الإعلانات العقارية
+              الصادرة من الهيئة العامة
+              للعقار .</a></label>
+          </div>
+
+        </div>
+        <div class="col-12 text-center">
+          <a href="" class="btn main-btn mx-auto">
+            حفظ
+          </a>
+        </div>
+
+      </div>
+    </div> 
   </div>
   <!-- Start Footer -->
   <footer class="main-footer">
