@@ -105,31 +105,77 @@
     margin-bottom: 20px;
 }
 .use-navb {
-  .navbar-link {
-    color: #333;
-    display: block;
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-    transition: .2s all ease-in-out;
-    &:hover {
-      background-color: #583663;
-      color: #FFF;
-  }
-  }
+    .navbar-link {
+        color: #333;
+        display: block;
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        transition: 0.2s all ease-in-out;
+        &:hover {
+            background-color: #583663;
+            color: #fff;
+        }
+    }
 }
 .avatar-wrapper {
-  position: relative;
-  height: 130px;
-  width: 130px;
-  margin: 50px auto;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 1px 1px 15px -5px black;
-  transition: all 0.3s ease;
-  .profile-pic {
-    height: 100%;
-    width: 100%;
-    object-fit:cover;
+    position: relative;
+    height: 130px;
+    width: 130px;
+    margin: 50px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 1px 1px 15px -5px black;
     transition: all 0.3s ease;
+    .profile-pic {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: all 0.3s ease;
+    }
 }
+.main-table {
+    thead {
+        tr {
+            background-color: #004355 !important;
+            color: #fff !important;
+        }
+    }
+}
+.main-card {
+    .card-header {
+        color: #fff !important;
+        background-color: #004355 !important;
+    }
+}
+.card-notifications {
+    .icon {
+        vertical-align: middle;
+    }
+    .content {
+        color: #e7714d;
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+}
+.card-service {
+    display: block;
+    color: #583663;
+    font-size: 18px;
+    .img {
+        display: inline-flex;
+        background-color: transparent;
+        padding: 1rem;
+        justify-content: center;
+        height: 90px;
+        width: 90px;
+        border: 2px solid #8e659f;
+        align-items: center;
+        border-radius: 50%;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover; 
+        }
+    }
 }
